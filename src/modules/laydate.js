@@ -231,6 +231,41 @@
         ,formatError: ['The date format error<br>Must be followed：<br>', '<br>It has been reset']
         ,preview: 'The selected result'
       }
+      ,ja: {
+          weeks: ["日", "月", "火", "水", "木", "金", "土"],
+          time: ["時", "分", "秒"],
+          timeTips: "時間を選択",
+          startTime: "開始時間",
+          endTime: "終了時間",
+          dateTips: "日付に戻る",
+          month: [
+            "一月",
+            "二月",
+            "三月",
+            "四月",
+            "五月",
+            "六月",
+            "七月",
+            "八月",
+            "九月",
+            "十月",
+            "十一月",
+            "十二月",
+          ],
+          tools: {
+            confirm: "確定",
+            clear: "クリア",
+            now: "現在",
+          },
+          timeout:
+            "終了時間は開始時間よりも早くすることはできません。<br>もう一度選択してください。",
+          invalidDate: "有効な日付や時間の範囲外です",
+          formatError: [
+            "日付の形式が正しくありません。<br>次の形式に従う必要があります：<br>",
+            "<br>リセットしました。",
+          ],
+          preview: "現在選択されている結果",
+        },
     };
     return text[options.lang] || text['cn'];
   };
