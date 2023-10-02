@@ -283,7 +283,7 @@ layui.define(['lay', 'laytpl', 'laypage', 'form', 'util'], function(exports){
     defaultContextmenu: true, // 显示默认上下文菜单
     autoSort: true, // 是否前端自动排序。如果否，则需自主排序（通常为服务端处理好排序）
     text: {
-      none: '无数据'
+      none: 'データなし'
     },
     cols: []
   };

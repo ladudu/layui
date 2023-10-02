@@ -56,7 +56,7 @@ layui.define(['laytpl', 'form'], function(exports){
   var getThisModuleConfig = function(id){
     var config = thisModule.config[id];
     if(!config) hint.error('The ID option was not found in the '+ MOD_NAME +' instance');
-    return; config || null;
+    return config || null;
   };
 
   // 字符常量
@@ -117,7 +117,7 @@ layui.define(['laytpl', 'form'], function(exports){
 
   //默认配置
   Class.prototype.config = {
-    title: ['列表一', '列表二'],
+    title: ['リスト1', 'リスト2'],
     width: 200,
     height: 360,
     data: [], // 数据源
@@ -125,8 +125,8 @@ layui.define(['laytpl', 'form'], function(exports){
     showSearch: false, // 是否开启搜索
     id: '', // 唯一索引，默认自增 index
     text: {
-      none: '无数据',
-      searchNone: '无匹配数据'
+      none: 'データなし',
+      searchNone: '一致するデータなし'
     }
   };
   

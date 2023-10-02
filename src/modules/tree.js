@@ -107,8 +107,8 @@ layui.define('form', function(exports){
     edit: false,  // 是否开启节点的操作图标
     
     text: {
-      defaultNodeName: '未命名', // 节点默认名称
-      none: '无数据'  // 数据为空时的文本提示
+      defaultNodeName: '無題', // 节点默认名称
+      none: 'データなし'  // 数据为空时的文本提示
     }
   };
   
@@ -575,7 +575,7 @@ layui.define('form', function(exports){
 
       // 删除
       } else {
-        layer.confirm('确认删除该节点 "<span style="color: #999;">'+ (item[customName.title] || '') +'</span>" 吗？', function(index){
+        layer.confirm('ノード "<span style="color: #999;">'+ (item[customName.title] || '') +'</span>"  を削除しますか？', function(index){
           options.operate && options.operate(returnObj); // 节点删除的回调
           returnObj.status = 'remove'; // 标注节点删除
           
