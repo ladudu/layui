@@ -71,8 +71,8 @@ layui.define(function(exports){
       groups = config.pages;
     }
     
-    config.prev = 'prev' in config ? config.prev : '&#x4E0A;&#x4E00;&#x9875;'; //上一页文本
-    config.next = 'next' in config ? config.next : '&#x4E0B;&#x4E00;&#x9875;'; //下一页文本
+    config.prev = 'prev' in config ? config.prev : '前へ'; //上一页文本
+    config.next = 'next' in config ? config.next : '次へ'; //下一页文本
     
     //计算当前组
     var index = config.pages > groups 
@@ -99,7 +99,7 @@ layui.define(function(exports){
         
         //首页
         if(index > 1 && config.first !== false && groups !== 0){
-          pager.push('<a class="layui-laypage-first" data-page="1"  title="&#x9996;&#x9875;">'+ (config.first || 1) +'</a>');
+          pager.push('<a class="layui-laypage-first" data-page="1"  title="トップページ">'+ (config.first || 1) +'</a>');
         }
 
         //计算当前页码组的起始页
@@ -136,7 +136,7 @@ layui.define(function(exports){
             pager.push('<span class="layui-laypage-spr">&#x2026;</span>');
           }
           if(groups !== 0){
-            pager.push('<a class="layui-laypage-last" title="&#x5C3E;&#x9875;"  data-page="'+ config.pages +'">'+ (config.last || config.pages) +'</a>');
+            pager.push('<a class="layui-laypage-last" title="最終ページ"  data-page="'+ config.pages +'">'+ (config.last || config.pages) +'</a>');
           }
         }
 
@@ -151,7 +151,7 @@ layui.define(function(exports){
       }()
       
       //数据总数
-      ,count: '<span class="layui-laypage-count">共 '+ config.count +' 条</span>'
+      ,count: '<span class="layui-laypage-count">共 '+ config.count +' 件</span>'
       
       //每页条数
       ,limit: function(){
@@ -160,7 +160,7 @@ layui.define(function(exports){
           options.push(
             '<option value="'+ item +'"'
             +(item === config.limit ? 'selected' : '') 
-            +'>'+ item +' 条/页</option>'
+            +'>'+ item +' 件/ページ</option>'
           );
         });
         return options.join('') +'</select></span>';
@@ -173,9 +173,9 @@ layui.define(function(exports){
 
       //跳页区域
       ,skip: function(){
-        return ['<span class="layui-laypage-skip">&#x5230;&#x7B2C;'
+        return ['<span class="layui-laypage-skip">第'
           ,'<input type="text" min="1" value="'+ config.curr +'" class="layui-input">'
-          ,'&#x9875;<button type="button" class="layui-laypage-btn">&#x786e;&#x5b9a;</button>'
+          ,'ページ <button type="button" class="layui-laypage-btn">確定</button>'
         ,'</span>'].join('');
       }()
     };
