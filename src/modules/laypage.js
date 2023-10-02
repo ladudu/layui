@@ -151,7 +151,7 @@ layui.define(function(exports){
       }()
       
       //数据总数
-      ,count: '<span class="layui-laypage-count">共 '+ config.count +' 件</span>'
+      ,count: '<span class="layui-laypage-count">全 '+ config.count +' 件</span>'
       
       //每页条数
       ,limit: function(){
