@@ -33,7 +33,7 @@ var ready = {
   events: {resize: {}}, 
   minStackIndex: 0,
   minStackArr: [],
-  btn: ['確定', 'キャンセル'],
+  btn: ['確認', '取消'],
 
   // 五种原始层模式
   type: ['dialog', 'page', 'iframe', 'loading', 'tips'],
